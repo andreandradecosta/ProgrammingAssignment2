@@ -1,4 +1,5 @@
-##These two functions could be used to cache the result of inverting a matrix. Instead of calling solve each time, the result of the first call is saved in a cache. Example:
+# These two functions could be used to cache the result of inverting a matrix. 
+# Instead of calling solve each time, the result of the first call is saved in a cache. Example:
 # Creating a matrix that cache its inverse:
 # m <- makeCacheMatrix(rbind(c(1, -1/4), c(-1/4, 1)))
 
@@ -16,7 +17,7 @@
 # [2,] 0.2666667 1.0666667
 
 
-## makeCacheMatrix takes an ordinary matrix e returns a cacheable matix that it is able to save it's inverse
+# makeCacheMatrix takes an ordinary matrix e returns a cacheable matix that it is able to save it's inverse
 
 makeCacheMatrix <- function(x = matrix()) {
     i <- NULL
@@ -34,7 +35,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve takes a cacheable matrix (the one returned by makeCacheMatrix) and returns it's inverse. For a given matrix, the inverse is calculated just once.
+# cacheSolve takes a cacheable matrix (the one returned by makeCacheMatrix) and returns it's inverse. 
+# For a given matrix, the inverse is calculated just once.
 
 cacheSolve <- function(x, ...) {
     i <- x$getinv()
